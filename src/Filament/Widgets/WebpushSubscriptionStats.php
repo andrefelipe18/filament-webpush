@@ -19,8 +19,10 @@ class WebpushSubscriptionStats extends BaseWidget
         $table = config('webpush.table_name', 'push_subscriptions');
 
         $activeSubscriptions = DB::table($table)
-            ->distinct(['subscribable_id', 'subscribable_type'])
-            ->count(['subscribable_id', 'subscribable_type']);
+            ->select('subscribable_id', 'subscribable_type')
+            ->groupBy('subscribable_id', 'subscribable_type')
+            ->get()
+            ->count();
 
         $totalSubscriptions = DB::table($table)->count();
 
