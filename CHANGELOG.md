@@ -2,6 +2,14 @@
 
 All notable changes to `filament-webpush` will be documented in this file.
 
+## v1.1.3 - 2025-06-25
+
+### What's Changed
+
+* fix: use collection count by @andrefelipe18 in https://github.com/andrefelipe18/filament-webpush/pull/12
+
+**Full Changelog**: https://github.com/andrefelipe18/filament-webpush/compare/v1.1.2...v1.1.3
+
 ## v1.1.2 - 2025-05-27
 
 ### What's Changed
