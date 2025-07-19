@@ -2,6 +2,19 @@
 
 All notable changes to `filament-webpush` will be documented in this file.
 
+## v1.1.4 - 2025-07-19
+
+### What's Changed
+
+* build(deps): bump stefanzweifel/git-auto-commit-action from 5 to 6 by @dependabot[bot] in https://github.com/andrefelipe18/filament-webpush/pull/10
+* fix-issue-13 by @andrefelipe18 in https://github.com/andrefelipe18/filament-webpush/pull/14
+
+### New Contributors
+
+* @dependabot[bot] made their first contribution in https://github.com/andrefelipe18/filament-webpush/pull/10
+
+**Full Changelog**: https://github.com/andrefelipe18/filament-webpush/compare/v1.1.3...v1.1.4
+
 ## v1.1.3 - 2025-06-25
 
 ### What's Changed
