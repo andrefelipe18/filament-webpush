@@ -1,4 +1,3 @@
-// Web Push Notification Script
 (function () {
     "use strict";
 
@@ -27,12 +26,11 @@
             console.error("VAPID public key not found");
             return;
         }
-        // Get Url Store by FilamentPanel
+
         const webpushStore = document.querySelector(
             'meta[name="webpush-store"]'
         )?.content;
 
-        // Get Url Destroy by FilamentPanel
         const webpushDestroy = document.querySelector(
             'meta[name="webpush-destroy"]'
         )?.content;
@@ -54,7 +52,6 @@
             return outputArray;
         };
 
-        // Get the service worker registration
         navigator.serviceWorker.ready
             .then((registration) => {
                 // Check if we already have a subscription
@@ -84,7 +81,6 @@
                     });
             })
             .then((subscription) => {
-                // Send subscription to server
                 return fetch(webpushStore, {
                     method: "POST",
                     body: JSON.stringify(subscription),
