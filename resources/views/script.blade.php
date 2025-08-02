@@ -5,6 +5,11 @@ if (!document.querySelector('script[data-webpush-loaded]') && !window.filamentWe
     script.src = '{{ asset('js/webpush.js') }}';
     script.defer = true;
     script.setAttribute('data-webpush-loaded', 'true');
+    
+    script.onload = function() {
+        window.filamentWebpushInitialized = true;
+    };
+    
     document.head.appendChild(script);
 }
 </script>

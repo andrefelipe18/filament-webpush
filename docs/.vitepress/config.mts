@@ -31,6 +31,10 @@ export default defineConfig({
                 text: "Getting Started",
                 items: [
                     { text: "Installation", link: "/" },
+                    {
+                        text: "Existing Service Worker",
+                        link: "/existing-service-worker",
+                    },
                     { text: "Notification Usage", link: "/notification-usage" },
                 ],
             },
@@ -41,6 +45,7 @@ export default defineConfig({
                         text: "Custom Configuration",
                         link: "/custom-configuration",
                     },
+                    { text: "JavaScript API", link: "/javascript-api" },
                     { text: "Usage Examples", link: "/examples" },
                 ],
             },

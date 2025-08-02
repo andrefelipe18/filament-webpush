@@ -25,6 +25,10 @@ This command will:
 5. Copy the service worker file to your public directory
 6. Copy the WebPush JavaScript file to your assets directory
 
+::: warning Important
+If you already have a service worker file (`sw.js`) in your public directory, the command will not overwrite it. In this case, please follow the [Existing Service Worker guide](/existing-service-worker) to manually integrate the WebPush functionality.
+:::
+
 After that, run the migrations:
 
 ```bash

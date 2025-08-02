@@ -102,6 +102,12 @@ class PrepareWebpushCommand extends Command
             File::makeDirectory(public_path(), 0755, true);
         }
 
+        if (File::exists($destination)) {
+            warning("Service worker file already exists at: {$destination}. Skipping copy.");
+            info("See documentation for more details on how to update it.");
+            return;
+        }
+
         File::copy($source, $destination);
         info("✔ Service worker file copied to: {$destination}");
     }

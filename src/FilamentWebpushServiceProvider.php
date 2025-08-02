@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace FilamentWebpush;
 
+use FilamentWebpush\Commands\MergeWebpushListenersCommand;
 use FilamentWebpush\Commands\PrepareWebpushCommand;
 use FilamentWebpush\Commands\TestWebpushCommand;
 use Spatie\LaravelPackageTools\Package;
@@ -18,6 +19,7 @@ class FilamentWebpushServiceProvider extends PackageServiceProvider
             ->hasCommands([
                 PrepareWebpushCommand::class,
                 TestWebpushCommand::class,
+                MergeWebpushListenersCommand::class,
             ])
             ->hasViews();
     }
