@@ -23,5 +23,4 @@ class FilamentWebpushServiceProvider extends PackageServiceProvider
             ])
             ->hasViews();
     }
-    }
 }
