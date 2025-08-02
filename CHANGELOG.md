@@ -2,6 +2,14 @@
 
 All notable changes to `filament-webpush` will be documented in this file.
 
+## v1.2.0 - 2025-08-02
+
+### What's Changed
+
+* feat: add new JavaScript API by @andrefelipe18 in https://github.com/andrefelipe18/filament-webpush/pull/15
+
+**Full Changelog**: https://github.com/andrefelipe18/filament-webpush/compare/v1.1.4...v1.2.0
+
 ## v1.1.4 - 2025-07-19
 
 ### What's Changed
