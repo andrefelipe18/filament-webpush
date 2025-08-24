@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace FilamentWebpush\Commands;
 
+use Exception;
 use App\Models\User;
 use FilamentWebpush\Notifications\TestPushNotification;
 use Illuminate\Console\Command;
@@ -58,7 +59,7 @@ class TestWebpushCommand extends Command
             $this->info("Make sure that the queue worker is running with: php artisan queue:work");
 
             return self::SUCCESS;
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             $this->error("Error sending notification: " . $e->getMessage());
 
             return self::FAILURE;
