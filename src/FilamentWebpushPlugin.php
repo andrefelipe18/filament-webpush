@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace FilamentWebpush;
 
+use Closure;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Concerns\EvaluatesClosures;
@@ -77,9 +78,9 @@ class FilamentWebpushPlugin implements Plugin
         return app(static::class);
     }
 
-    public function registerSubscriptionStatsWidget(\Closure | bool $register = true): static
+    public function registerSubscriptionStatsWidget(Closure | bool $register = true): static
     {
-        if ($register instanceof \Closure) {
+        if ($register instanceof Closure) {
             $register = $this->evaluate($register);
         }
 

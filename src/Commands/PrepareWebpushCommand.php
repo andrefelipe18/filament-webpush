@@ -4,6 +4,8 @@ declare(strict_types = 1);
 
 namespace FilamentWebpush\Commands;
 
+use NotificationChannels\WebPush\WebPushServiceProvider;
+use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 
@@ -25,14 +27,14 @@ class PrepareWebpushCommand extends Command
         // Step 1: Publish migrations
         note('Publishing WebPush database migrations...');
         $this->call('vendor:publish', [
-            '--provider' => \NotificationChannels\WebPush\WebPushServiceProvider::class,
+            '--provider' => WebPushServiceProvider::class,
             '--tag'      => 'migrations',
         ]);
 
         // Step 2: Publish config
         note('Publishing WebPush configuration file...');
         $this->call('vendor:publish', [
-            '--provider' => \NotificationChannels\WebPush\WebPushServiceProvider::class,
+            '--provider' => WebPushServiceProvider::class,
             '--tag'      => 'config',
         ]);
 
@@ -55,7 +57,7 @@ class PrepareWebpushCommand extends Command
                 } else {
                     error('VAPID key generation failed. You can manually run "php artisan webpush:vapid" to try again.');
                 }
-            } catch (\Exception) {
+            } catch (Exception) {
                 error('VAPID key generation failed. Please try manually with: "php artisan webpush:vapid".');
 
                 return self::FAILURE;
